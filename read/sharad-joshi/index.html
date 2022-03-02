@@ -1,24 +1,14 @@
 <!DOCTYPE html>
-<html lang="hi" translate="no">
+<html lang="hi" translate="no" ng-app="">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>शरद जोशी</title>
-<link rel="stylesheet" href="../../style/bootstrap.css"></link>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/style/angular.min.js"></script>
+<script src="/style/angular-route.js"></script>
 </head>
 <body>
-<script>
-$(document).ready(function(){
-   
-   $('#header').load("/import/header.html");
-   $('#footer').load("/import/footer.html");
-
-});
-</script>
-</head>
-<body>
-<div id="header"></div>
+<header ng-include="/import/header.html"></header>
 <div class="container mt-2">
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">मुख्य</a></li>
@@ -43,8 +33,7 @@ $(document).ready(function(){
     </tr>
     </tbody>
 </table>
-<div id="footer"></div>
+<footer ng-include="/import/footer.html"></footer>
 </div>
-<script src="/style/bootstrap.bundle.min.js"></script>
 </body>
 </html>
