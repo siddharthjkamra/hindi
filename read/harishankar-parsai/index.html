@@ -5,20 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>हरिशंकर परसाई</title>
 <link rel="stylesheet" href="../../style/bootstrap.css"></link>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/style/main.js"></script>
+<link rel="stylesheet" href="/style/main.css"></link>
 </head>
 <body>
-<script>
-$(document).ready(function(){
-   
-   $('#header').load("/import/header.html");
-   $('#footer').load("/import/footer.html");
-
-});
-</script>
 </head>
 <body>
-<div id="header"></div>
+<div katana="/import/header.html"></div>
 <div class="container mt-2">
 <ol class="breadcrumb">
   <li class="breadcrumb-item"><a href="/">मुख्य</a></li>
@@ -34,9 +27,13 @@ $(document).ready(function(){
   								<tr class="table-info">
       <th scope="col">रचना का नाम</th>
       <th scope="col">रचना का प्रकार</th>
-    </tr>
+      </tr>
   			</thead>
   			<tbody>
+  				<tr class="table-success" onclick="location.href='ashleel.html';">
+      <th>अश्लील</th>
+      <th>व्यंग्य</th>
+    </tr>
   				<tr class="table-success" onclick="location.href='badchalan.html';">
       <th>बदचलन</th>
       <th>व्यंग्य</th>
@@ -57,10 +54,17 @@ $(document).ready(function(){
       <th>एक गौभक्त से भेंट</th>
       <th>व्यंग्य</th>
     </tr>
+    <tr class="table-success" onclick="location.href='ashleel.html';">
+      <th>अश्लील</th>
+      <th>व्यंग्य</th>
+    </tr>
     </tbody>
 </table>
-<div id="footer"></div>
+<div katana="/import/footer.html"></div>
 </div>
+<script>
+includeHTML();
+</script>
 <script src="/style/bootstrap.bundle.min.js"></script>
 </body>
 </html>
