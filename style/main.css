@@ -1,0 +1,124 @@
+/* Universal */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Hind', sans-serif;
+}
+
+/* Header */
+.logo img {
+background-color: #f16334;
+width: 150px;
+padding: 5px;
+border-radius: 5px 5px 0px 0px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: navy;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #f16334;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main Page */
+section {
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+.title {
+background-color: #f16334;
+color: white;
+text-align: center;
+padding: 10px;
+border-radius: 5px 5px 0px 0px;
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+}
+
+table td, th {
+  border: 1px solid #121212;
+  padding: 8px;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+table td {
+text-align: left;
+}
+
+table tr:hover {
+background-color: lightblue;
+}
+
+/* Footer */
+.footer {
+background-color: #f16334;
+padding: 10px;
+color: #fff;
+text-align: center;
+border-radius: 0px 0px 5px 5px;
+}
