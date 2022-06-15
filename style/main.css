@@ -114,6 +114,31 @@ table tr:hover {
 background-color: lightblue;
 }
 
+/* Breadcrumbs */
+ul.breadcrumb {
+  padding: 10px;
+  list-style: none;
+  background-color: #eee;
+  margin: 0px 4px 0px 4px;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 1em;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
+
 /* Footer */
 .footer {
 background-color: #f16334;
