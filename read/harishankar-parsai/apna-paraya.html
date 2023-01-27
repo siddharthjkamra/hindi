@@ -4,27 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>अपना-पराया (लघुकथा): हरिशंकर परसाई</title>
-<link rel="stylesheet" href="../../style/bootstrap.css"></link>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="../../style/main.css"></link>
 </head>
-<body>
-				<script>
-$(document).ready(function(){
-   
-   $('#header').load("/import/header.html");
-   $('#footer').load("/import/footer.html");
 
-});
-</script>
-</head>
 <body>
-<div id="header"></div>
-<div class="container mt-2">
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="/">मुख्य</a></li>
-  <li class="breadcrumb-item"><a href="../harishankar-parsai/index.html">हरिशंकर परसाई</a></li>
-  <li class="breadcrumb-item active">अपना-पराया (लघुकथा)</li>
-</ol>
+<div katana="/import/header.html"></div>
+
+<section>
+<ul class="breadcrumb">
+<li><a href="/">मुख्य</a></li>
+<li><a href="../harishankar-parsai/index.html">हरिशंकर परसाई</a></li>
+<li>अपना-पराया (लघुकथा)</li>
+</ul>
 <h2>अपना-पराया (लघुकथा): हरिशंकर परसाई</h2>
 <p>'आप किस स्‍कूल में शिक्षक हैं?'
 </p>
@@ -41,10 +32,11 @@ $(document).ready(function(){
 <p>'आपका बच्‍चा भी वहाँ पढ़ता होगा?'
 </p>
 <p>'जी नहीं, मेरा बच्‍चा तो 'आदर्श विद्यालय' में पढ़ता है।'
-<br/>
-<br/>
-<div id="footer"></div>
 </div>
-<script src="/style/bootstrap.bundle.min.js"></script>
+<div katana="/import/footer.html"></div>
+<script src="/style/main.js"></script>
+<script>
+  includeHTML();
+</script>
 </body>
 </html>
