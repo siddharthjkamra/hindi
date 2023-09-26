@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="../../style/main.css"></link>
 </head>
 <body>
-<div katana="/import/header.html"></div>
+<div katana="/import/header"></div>
 <section>
 <ul class="breadcrumb">
 <li><a href="/">मुख्य</a></li>
@@ -21,28 +21,9 @@
 
 <!-- Data -->
 
-<style>
-.inv {
-display: none;
-}
-#content_1, #content_2, #content_3, #content_4, #content_5, #content_6 {
-background-color: #f16334;
-font-size: 1.2em;
-padding: 0.5em;
-border-radius: 0.3em;
-color: #fff;
-}
-#choose {
-width: 100%;
-font-family: 'Hind', sans-serif;
-font-size: 16px;
-text-align: center;
-margin-bottom: 5px;
-}
-</style>
 <body>
 <select id="choose">
-<option value="">कविता तो चुनिए</option>
+<option value="">कविता चुनें</option>
 <option value="content_1">आई में आ गए</option>
 <option value="content_2">कालिज स्टूडैंट</option>
 <option value="content_3">नाम बड़े दर्शन छोटे</option>
@@ -92,7 +73,7 @@ margin-bottom: 5px;
 कहें 'काका कवि' राय, भयंकर तुमको देता,<br>
 बन सकते हो इसी तरह 'बिगड़े दिल नेता।'<br></div>
 
-<div id="content_3" class="inv"><object data="naam-bade-darshan-chhote.txt" width="300"
+<div id="content_3" class="inv"><object data="naam-bade-darshan-chhote.txt" width="100%"
     height="500"></object></div>
 
 <div id="content_4" class="inv">भोलू तेली गाँव में, करै तेल की सेल <br>
@@ -143,29 +124,25 @@ margin-bottom: 5px;
  सारे जहाँ से अच्छा है इंडिया हमारा।</div>
         
 <script>
-            document
-                .getElementById('choose')
-                .addEventListener('change', function () {
-                    'use strict';
-                    var vis = document.querySelector('.vis'),   
-                        target = document.getElementById(this.value);
-                    if (vis !== null) {
-                        vis.className = 'inv';
-                    }
-                    if (target !== null ) {
-                        target.className = 'vis';
-                    }
-            });
+document
+  .getElementById('choose')
+  .addEventListener('change', function() {
+    'use strict';
+    var vis = document.querySelector('.vis'),
+      target = document.getElementById(this.value);
+    if (vis !== null) {
+      vis.className = 'inv';
+    }
+    if (target !== null) {
+      target.className = 'vis';
+    }
+  });
 </script>
 </body>
 
-
-
-
-
 </section>
 
-<div katana="/import/footer.html"></div>
+<div katana="/import/footer"></div>
 <script src="/style/main.js"></script>
 <script>
 includeHTML();

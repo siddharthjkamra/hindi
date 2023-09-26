@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="hi" translate="no" ng-app="">
+<html lang="hi" translate="no">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>मुंशी प्रेमचंद</title>
-<link rel="stylesheet" href="../../style/main.css"></link>
+<link rel="stylesheet" href="/style/main.css"></link>
 </head>
 <body>
-<div katana="/import/header.html"></div>
+<div katana="/import/header"></div>
 <section>
 <ul class="breadcrumb">
 <li><a href="/">मुख्य</a></li>
@@ -17,21 +17,65 @@
 <p>धनपत राय श्रीवास्तव (31 जुलाई 1880, वाराणसी – 8 अक्टूबर 1936, वाराणसी) जो प्रेमचंद नाम से जाने जाते हैं, वो हिन्दी और उर्दू के सर्वाधिक लोकप्रिय उपन्यासकार, कहानीकार एवं विचारक थे। उन्होंने सेवासदन, प्रेमाश्रम, रंगभूमि, निर्मला, गबन, कर्मभूमि, गोदान आदि लगभग डेढ़ दर्जन उपन्यास तथा कफन, पूस की रात, पंच परमेश्वर, बड़े घर की बेटी, बूढ़ी काकी, दो बैलों की कथा आदि तीन सौ से अधिक कहानियाँ लिखीं। उनमें से अधिकांश हिन्दी तथा उर्दू दोनों भाषाओं में प्रकाशित हुईं। उन्होंने अपने दौर की सभी प्रमुख उर्दू और हिन्दी पत्रिकाओं जमाना, सरस्वती, माधुरी, मर्यादा, चाँद, सुधा आदि में लिखा। उन्होंने हिन्दी समाचार पत्र जागरण तथा साहित्यिक पत्रिका हंस का संपादन और प्रकाशन भी किया। इसके लिए उन्होंने सरस्वती प्रेस खरीदा जो बाद में घाटे में रहा और बन्द करना पड़ा। प्रेमचंद फिल्मों की पटकथा लिखने मुंबई आए और लगभग तीन वर्ष तक रहे। जीवन के अंतिम दिनों तक वे साहित्य सृजन में लगे रहे। महाजनी सभ्यता उनका अंतिम निबन्ध, साहित्य का उद्देश्य अन्तिम व्याख्यान, कफन अन्तिम कहानी, गोदान अन्तिम पूर्ण उपन्यास तथा मंगलसूत्र अन्तिम अपूर्ण उपन्यास माना जाता है।</p>
 <img src="author.jpeg" alt="मुंशी प्रेमचंद" width="150px"></img>
 </center>
-<table>
-		  <tr>
-      <th>रचना का नाम</th>
-      <th>रचना का प्रकार</th>
-    </tr>
-  				<tr onclick="location.href='#';">
-      <td>No story yet</td>
-      <td>कहानी</td>
-    </tr>
-</table>
+
+<!-- Dropdown menu -->
+<select id="choose">
+  <option value="">कहानी चुनें</option>
+  <option value="namak-ka-daroga.txt">नमक का दारोगा</option>
+  <option value="idgah.txt">ईदगाह</option>
+</select>
+
+<!-- Div to display the story text -->
+<div id="textContainer" style="font-size: 16px;"></div>
+
 </section>
-<div katana="/import/footer.html"></div>
+<div katana="/import/footer"></div>
 <script src="/style/main.js"></script>
 <script>
-includeHTML();
+  includeHTML();
+// Function to load text from a file and set font size
+function loadFile(selectedFile) {
+  var textContainer = document.getElementById('textContainer');
+
+  // Check if the selectedFile doesn't end with ".txt" and add it if needed
+  if (selectedFile && !selectedFile.endsWith(".txt")) {
+    selectedFile += ".txt";
+  }
+
+  if (selectedFile) {
+    // Use AJAX to load the text from the selected file
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', selectedFile, true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        // Set the font size and display the loaded text
+        textContainer.style.fontSize = '18px'; // You can change the font size here
+        textContainer.textContent = xhr.responseText;
+      }
+    };
+    xhr.send();
+  } else {
+    // If no file is selected, clear the content
+    textContainer.style.fontSize = '16px'; // Reset font size
+    textContainer.textContent = '';
+  }
+}
+
+// Check if the page was loaded with a file parameter in the URL
+var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+var fileNameParam = urlParams.get('file');
+
+// If a file parameter was provided, load the file
+if (fileNameParam) {
+  loadFile(fileNameParam);
+}
+
+// Event listener for the dropdown menu
+document.getElementById('choose').addEventListener('change', function() {
+  var selectedFile = this.value;
+  loadFile(selectedFile);
+});
 </script>
 </body>
 </html>
