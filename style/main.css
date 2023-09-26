@@ -176,3 +176,8 @@ margin-bottom: 5px;
   padding-right: 5px;
   padding-top: 3px;
 }
+
+.wrapped-text {
+  max-width: 100%;
+  white-space: pre-wrap; /* Preserve whitespace and wrap text */
+}

@@ -26,7 +26,7 @@
 </select>
 
 <!-- Div to display the story text -->
-<div id="textContainer" style="font-size: 16px;"></div>
+<div id="textContainer" style="font-size: 16px;"><pre></pre></div>
 
 </section>
 <div katana="/import/footer"></div>
@@ -50,7 +50,7 @@ function loadFile(selectedFile) {
       if (xhr.readyState === 4 && xhr.status === 200) {
         // Set the font size and display the loaded text
         textContainer.style.fontSize = '18px'; // You can change the font size here
-        textContainer.textContent = xhr.responseText;
+        textContainer.innerHTML = '<pre class="wrapped-text">' + xhr.responseText + '</pre>';
       }
     };
     xhr.send();
