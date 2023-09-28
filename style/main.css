@@ -148,6 +148,35 @@ text-align: center;
 border-radius: 0px 0px 5px 5px;
 }
 
+/* Style the list */
+.footer-links {
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+.footer-links li {
+  display: inline; /* Display items horizontally */
+  margin-right: 10px; /* Add spacing between items */
+  font-size: 15px;
+}
+
+/* Style the links */
+.footer-links a {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* Set link color */
+}
+
+/* Style link hover state */
+.footer-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+a {
+  text-decoration: none;
+}
+
 
 /* Dropdown of Stories */
 
