@@ -211,3 +211,9 @@ padding: 5px;
   max-width: 100%;
   white-space: pre-wrap; /* Preserve whitespace and wrap text */
 }
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

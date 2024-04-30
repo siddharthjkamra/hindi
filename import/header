@@ -1,7 +1,7 @@
 <div class="logo">
 <img src="/style/logo.png" width="150px"></img>
 </div>
-<div class="navbar">
+<div class="navbar no-print">
   <a href="/">मुख्य</a>
   <a href="/author.html">लेखक</a>
   <div class="dropdown">
